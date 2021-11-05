@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+<!DOCTYPE html>
+<html lang="en" class="m-auto" style="margin: auto!important">
+<head>
+    <!-- Import Boostrap css, js, font awesome here -->
+    <title>Login-Master Blend</title>
+    <link rel="shortcut icon" href="image/logoCofee.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+</head>
+<body class="m-auto">
+    <div class="container m-auto p-0">
+        <div class="row p-0 m-0">
+            <div class="col-12 col-md-6 background-hidden mx-auto my-auto">
+                <form class="was-validated" action="#" method="post">
+                    <div class="form-row">
+                        <h1 class="text-light col-12 text-center"><i class="fas fa-id-card"></i> SIGN IN <i class="fas fa-id-card"></i></h1>
+                        <div class="form-group col-12">
+                            <label for="userName" class="text-light"><h6>Enter your Username:</h6></label>
+                            <input id="userName" class="form-control is-valid background-hidden text-white" type="text" name="username" placeholder="Username" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="password" class="text-light"><h6>Enter your Password:</h6></label>
+                            <input id="password" class="form-control is-valid background-hidden text-white" type="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="form-group col-6 col-sm-6">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="form-group col-6 col-sm-6 text-right">
+                            <a href="signup.html">Register now?</a>
+                        </div>
+                        <div class="form-group col-12">
+                            <button type="submit" class="btn btn-outline-light btn-block">SIGN IN <i class="fas fa-sign-in-alt"></i></button>
+                        </div>
+                        <div class="form-group col-12 text-center text-light">
+                            <h6>--- OR ---</h6>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-light btn-block"><a href="#" class="text-info btn-block"><i class="fab fa-twitter"></i></a></button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-light btn-block"><a href="#" class="text-primary btn-block"><i class="fab fa-facebook-f"></i></a></button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-light btn-block"><a href="#" class="text-danger btn-block"><i class="fab fa-instagram"></i></a></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

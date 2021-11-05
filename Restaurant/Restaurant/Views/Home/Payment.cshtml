@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "Services Restaurants";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #paymentLink {
+        color: #f7b924 !important;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row p-4 content-background">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-7 p-4 overflow-content">
+            <h3 class="text-light">Number of orders placed*</h3>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-12 text-light">
+                    <div class="cart-list">
+                        <table class="table">
+                            <thead class="thead-primary">
+                                <tr class="text-center text-warning">
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th class="text-left">Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center text-white" id="deleteFirstRow">
+                                    <td class="align-middle"><p class="text-danger p-1 d-block icon-delete-food border border-danger" onclick="firstDeleteFood()">X</p></td>
+                                    <td class="align-middle"><img src="~/images/dish1.png" class="size-image-food" alt="block-food"></td>
+                                    <td class="text-left align-middle">
+                                        <h5>Baked ribs</h5>
+                                    </td>
+                                    <td class="price align-middle">$7.90</td>
+                                    <td class="quantity align-middle">
+                                        <div class="input-group align-middle">
+                                            <input type="number" name="quantity" class="quantity form-control input-number text-center background-hidden text-light" id="first-numFood" onchange="firstMoneyFood()" value="1" min="1" max="100">
+                                        </div>
+                                    </td>
+                                    <td class="total align-middle">$<span id="moneyFirstFood">7.90</span></td>
+                                </tr>
+                                <tr class="text-center text-white" id="deleteLastRow">
+                                    <td class="align-middle"><p class="text-danger p-1 d-block icon-delete-food border border-danger" onclick="lastDeleteFood()">X</p></td>
+                                    <td class="align-middle"><img src="~/images/dish2.png" class="size-image-food" alt="block-food"></td>
+                                    <td class="text-left align-middle">
+                                        <h5>Beef steak</h5>
+                                    </td>
+                                    <td class="price align-middle">$5.90</td>
+                                    <td class="quantity align-middle">
+                                        <div class="input-group align-middle">
+                                            <input type="number" name="quantity" class="quantity form-control input-number text-center background-hidden text-light" id="last-numFood" onchange="lastMoneyFood()" value="1" min="1" max="100">
+                                        </div>
+                                    </td>
+                                    <td class="total align-middle">$<span id="moneyLastFood">5.90</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-5 p-4">
+            <form class="was-validated w-100" action="#" method="post">
+                <div class="form-row">
+                    <h3 class="text-light col-12">Payment table*</h3>
+                    <hr class="my-4">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                        <label class="text-light" for="#">Bank account name*</label>
+                        <input class="form-control is-valid background-hidden text-white" type="text" name="nameBanking" placeholder="Bank account name" required>
+                        <div class="invalid-feedback">
+                            Please choose a Bank account name.
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                        <label class="text-light" for="#">Bank account number*</label>
+                        <input class="form-control is-valid background-hidden text-white" type="number" name="numberBanking" placeholder="Bank account number" required>
+                        <div class="invalid-feedback">Please choose a Bank account number.</div>
+                    </div>
+                    <div class="form-group col-12">
+                        <label class="text-light" for="#">Email*</label>
+                        <input class="form-control is-valid background-hidden col-12 text-white" type="email" name="email" placeholder="Email" required>
+                        <div class="invalid-feedback">
+                            Please choose a Email.
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                        <label class="text-light" for="#">Enter your phone number*</label>
+                        <input class="form-control is-valid background-hidden text-white" type="tel" name="phone" pattern="[0-9]{10}" placeholder="Bank account number" required>
+                        <div class="invalid-feedback">
+                            Please choose a Phone.
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                        <label for="bank" class="text-light">Choose the payment bank*</label>
+                        <input id="bank" class="form-control is-valid background-hidden text-white" list="banking" name="bank" placeholder="Choose the payment bank" required>
+                        <datalist id="banking">
+                            <option value="VPBank (thẻ Autolink)">
+                            <option value="ACB">
+                            <option value="BIDV">
+                            <option value="Đông Á Bank">
+                            <option value="PVCombank">
+                            <option value="Sacombank">
+                            <option value="SHB">
+                            <option value="SeaBank">
+                            <option value="TP Bank">
+                            <option value="Vietcombank">
+                        </datalist>
+                        <div class="invalid-feedback">
+                            Please choose a payment bank.
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-12">
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                            <label class="custom-control-label" for="customControlValidation1">I have read and accept the terms and conditions</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-12">
+                        <button type="submit" class="btn btn-outline-light btn-block">payment now</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-warning w-100 content-padding">
+    <div class="row text-center">
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-5 mb-5">
+            <p><span class="border border-dark icon-service"><i class="far fa-address-card"></i></span></p>
+            <h3>EASY TO ORDER</h3>
+            <p>A comprehensive store for digital and large-scale orders, online booking, POS, online payments, customer data collection, customer retention and marketing solutions.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 mt-5 mb-5">
+            <p><span class="border border-dark icon-service"><i class="fas fa-shipping-fast"></i></span></p>
+            <h3>FASTEST DELIVERY</h3>
+            <p>Quickly connect with the largest shipping companies in Vietnam and choose the fastest and cheapest shipping unit, customers can be assured of no worries.</p>
+        </div>
+        <div class="col-sm-12 col-sm-6 col-md-4 mt-5 mb-5">
+            <p><span class="border border-dark icon-service"><i class="fas fa-coffee"></i></span></p>
+            <h3>QUALITY COFFEE</h3>
+            <p>The quality of sweetness in coffee brings mellow and gentle taste, the freshness and perfection of the coffee bean brings satisfaction to customers.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function firstDeleteFood() {
+        document.getElementById("deleteFirstRow").style.display = "none";
+    }
+    function lastDeleteFood() {
+        document.getElementById("deleteLastRow").style.display = "none";
+    }
+    function firstMoneyFood() {
+        var quantily = document.getElementById("first-numFood").value;
+        if (quantily > 0) {
+            total = quantily * 7.90;
+            document.getElementById("moneyFirstFood").innerHTML = total.toFixed(2);
+        }
+        else {
+            document.getElementById("moneyFirstFood").innerHTML = "not value!";
+        }
+    }
+    function lastMoneyFood() {
+        var quantily = document.getElementById("last-numFood").value;
+        total = quantily * 5.90;
+        if (quantily > 0) {
+            document.getElementById("moneyLastFood").innerHTML = total.toFixed(2);
+        }
+        else {
+            document.getElementById("moneyLastFood").innerHTML = "not value!";
+        }
+    }
+</script>

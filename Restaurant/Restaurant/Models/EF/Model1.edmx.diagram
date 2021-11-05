@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff0eb6b3e6bc4904a2e95b8289547467" Name="Diagram1">
+        <EntityTypeShape EntityType="RestaurantModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.AspNetRole" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.AspNetUser" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Category" Width="1.5" PointX="3.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Event" Width="1.5" PointX="6" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.FeedBack" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.OrderDetail" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Order" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Payment" Width="1.5" PointX="12.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Product" Width="1.5" PointX="6" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.sysdiagram" Width="1.5" PointX="2.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.TableDetail" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Table" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RestaurantModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_FeedBacks_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_Orders_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_Payments_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_TableDetails_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_TableDetails_Events" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_Payments_OrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_Orders_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.FK_TableDetails_Tables" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

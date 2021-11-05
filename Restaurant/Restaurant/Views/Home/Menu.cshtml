@@ -1,0 +1,389 @@
+﻿@using Restaurant.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Menu Restaurants";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #menuLink {
+        color: #f7b924 !important;
+    }
+</style>
+
+<div class="content-background p-4">
+    <div class="container">
+        <div class="row m-0">
+            <div class="col text-center .product-content">
+                <h1 class="text-warning font-family">Discover</h1>
+                <h1 class="text-white">Featured menu week</h1>
+            </div>
+        </div>
+        <div class="row d-md-flex">
+            <div class="col-lg-12 ftco-animate p-0">
+                <div class="row">
+                    <div class="col-md-12 nav-link-wrap mb-5">
+                        <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <a class="nav-link btn btn-outline-warning border-bottom active m-1" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">All</a>
+                            <a class="nav-link btn btn-outline-warning border-bottom m-1" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="true">Main Dish</a>
+                            <a class="nav-link btn btn-outline-warning border-bottom m-1" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Drinks</a>
+                            <a class="nav-link btn btn-outline-warning border-bottom m-1" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false">Cake</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-flex align-items-center">
+                        <div class="tab-content ftco-animate" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake1.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Strawberry cream cake, chocolate</h5>
+                                                <p class="card-text card-hiden-text ">The bitter and sweet taste of chocolate, the cool strawberry flavor with the sweet creamy flavor is nothing more.</p>
+                                                <h5>$6.80</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake2.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Pizza Mini Ice Cream Stick</h5>
+                                                <p class="card-text card-hiden-text ">Pizza mini ice cream with strawberry flavor, delicious and strange.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake3.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Sweet cream cake</h5>
+                                                <p class="card-text card-hiden-text ">With a soft crust aroma of rum, filled with sweet and sour strawberry cream.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake4.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Sweet cream cake</h5>
+                                                <p class="card-text card-hiden-text ">With a soft crust aroma of rum, filled with sweet and sour strawberry cream.</p>
+                                                <h5>$29.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake5.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">fruit cream cake</h5>
+                                                <p class="card-text card-hiden-text ">Sweet and cool taste. You will crush it when you taste the first bite.</p>
+                                                <h5>$10.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake6.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Strawberry cream cake</h5>
+                                                <p class="card-text card-hiden-text ">Sweet and cool taste. You will crush it when you taste the first bite.</p>
+                                                <h5>$10.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish1.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Baked ribs</h5>
+                                                <p class="card-text card-hiden-text ">Grilled ribs are hot, fragrant with honey, soft and sweet.</p>
+                                                <h5>$7.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish2.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Beef steak</h5>
+                                                <p class="card-text card-hiden-text ">The beef is large, soft, and when sliced, it is still ripe pink, with delicious taste, sweet meat dipped in garlic sauce.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish3.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Steak</h5>
+                                                <p class="card-text card-hiden-text ">The softer cuts of the tenderloin and ribs are quickly cooked using dry heat. The steak is sweet, soft, and attractive to the user.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish4.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Roasted chicken</h5>
+                                                <p class="card-text card-hiden-text ">Grilled chicken satay is marinated with rich soy sauce combined with fragrant sesame oil to cover the meat.</p>
+                                                <h5>$13.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish5.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Fried shrimp</h5>
+                                                <p class="card-text card-hiden-text ">Delicious fried shrimp, crispy and simple.</p>
+                                                <h5>$29.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish6.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Braised fish</h5>
+                                                <p class="card-text card-hiden-text ">The rich and delicious flavor of this dish will captivate anyone to enjoy.</p>
+                                                <h5>$19.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish1.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Baked ribs</h5>
+                                                <p class="card-text card-hiden-text ">Grilled ribs are hot, fragrant with honey, soft and sweet.</p>
+                                                <h5>$7.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish2.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Beef steak</h5>
+                                                <p class="card-text card-hiden-text ">The beef is large, soft, and when sliced, it is still ripe pink, with delicious taste, sweet meat dipped in garlic sauce.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish3.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Steak</h5>
+                                                <p class="card-text card-hiden-text ">The softer cuts of the tenderloin and ribs are quickly cooked using dry heat. The steak is sweet, soft, and attractive to the user.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish4.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Roasted chicken</h5>
+                                                <p class="card-text card-hiden-text ">Grilled chicken satay is marinated with rich soy sauce combined with fragrant sesame oil to cover the meat.</p>
+                                                <h5>$13.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish5.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Fried shrimp</h5>
+                                                <p class="card-text card-hiden-text ">Delicious fried shrimp, crispy and simple.</p>
+                                                <h5>$29.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/dish6.png" alt="menu-dish">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Braised fish</h5>
+                                                <p class="card-text card-hiden-text ">The rich and delicious flavor of this dish will captivate anyone to enjoy.</p>
+                                                <h5>$19.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink1.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Orange juice</h5>
+                                                <p class="card-text card-hiden-text ">The popular drink is made with oranges by extracting the juice from fresh oranges by squeezing or squeezing it's a kind of fresh orange juice.</p>
+                                                <h5>$9.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink2.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Red wine</h5>
+                                                <p class="card-text card-hiden-text ">Wine is an alcoholic beverage that is fermented from grapes. The natural chemical balance allows grapes to ferment without the addition of sugars, acids, enzymes, water or other nutrients.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink3.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Negroni</h5>
+                                                <p class="card-text card-hiden-text ">This is considered as a symbolic drink for summer. Negroni is sweet and full of freshness. It's like a sun kiss for your hot summer day.</p>
+                                                <h5>$6.50</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink4.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Negroni</h5>
+                                                <p class="card-text card-hiden-text ">This is considered as a symbolic drink for summer. Negroni is sweet and full of freshness. It's like a sun kiss for your hot summer day.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink5.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Italian Margarita</h5>
+                                                <p class="card-text card-hiden-text ">This orange juice cocktail is a fusion of the best of Italian and Mexican cuisines.</p>
+                                                <h5>$30.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/drink6.png" alt="menu-drink">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Peach cocktail</h5>
+                                                <p class="card-text card-hiden-text ">Peach cocktails are a ton of fun and there are many refreshing drink recipes to explore that feature the fruit.</p>
+                                                <h5>$10.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake1.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Strawberry cream cake, chocolate</h5>
+                                                <p class="card-text card-hiden-text ">The bitter and sweet taste of chocolate, the cool strawberry flavor with the sweet creamy flavor is nothing more.</p>
+                                                <h5>$6.80</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake2.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Pizza Mini Ice Cream Stick</h5>
+                                                <p class="card-text card-hiden-text ">Pizza mini ice cream with strawberry flavor, delicious and strange.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake3.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Sweet cream cake</h5>
+                                                <p class="card-text card-hiden-text ">With a soft crust aroma of rum, filled with sweet and sour strawberry cream.</p>
+                                                <h5>$5.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake4.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Sweet cream cake</h5>
+                                                <p class="card-text card-hiden-text ">With a soft crust aroma of rum, filled with sweet and sour strawberry cream.</p>
+                                                <h5>$29.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake5.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">fruit cream cake</h5>
+                                                <p class="card-text card-hiden-text ">Sweet and cool taste. You will crush it when you taste the first bite.</p>
+                                                <h5>$10.90</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="menu-wrap card background-hidden text-light shadow-animation">
+                                            <img class="card-img-top" src="~/images/cake6.png" alt="menu-cake">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-warning text-hiden font-family">Strawberry cream cake</h5>
+                                                <p class="card-text card-hiden-text ">Sweet and cool taste. You will crush it when you taste the first bite.</p>
+                                                <h5>$10.00</h5>
+                                                <a href="#" class="btn btn-outline-warning">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
