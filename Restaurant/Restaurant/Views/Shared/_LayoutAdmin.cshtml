@@ -73,15 +73,15 @@
                     </ul>
                 </div>
                 <hr />
-                <div class="overflow-auto">
+                @*<div class="overflow-auto">
                     <ul class="navbar-nav ml-auto siderbar-item-show text-left pl-3">
 
                         @Html.Partial("IndexPartialView\\NavbarAdminUlView")
 
                     </ul>
-                </div>
-                <div class="btn btn-secondary hide-siderbar" id="hide-button" style="display: none; opacity: 0; z-index: 1200 !important;"><i class="fas fa-caret-square-left"></i></div>
-                <div class="btn btn-secondary show-siderbar hiden" id="show-button" style="display: none; z-index: 1200 !important;"><i class="fas fa-caret-square-right"></i></div>
+                </div>*@
+                <div class="btn hide-siderbar" id="hide-button" style="display: none; opacity: 0; z-index: 1200 !important; background-color: #080808;"><i class="fas fa-caret-square-left text-white"></i></div>
+                <div class="btn show-siderbar hiden" id="show-button" style="display: none; z-index: 1200 !important; background-color: #080808;"><i class="fas fa-caret-square-right text-white"></i></div>
             </div>
         </div>
 
@@ -90,20 +90,20 @@
 
                 <!-- Topbar Navbar -->
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand-sm navbar-light bg-dark sticky-top">
+                <nav class="navbar navbar-expand-sm navbar-light bg-dark sticky-top p-0">
                     @*<button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseexample" aria-expanded="false" aria-controls="collapseexample">
             <i class="fas fa-align-left"></i>
         </button>*@
-                    <a style="padding: 8px;" href="#" class="navbar-brand navbar-branch-admin text-white hide-text">
+                    <a style="padding: 0px;" href="#" class="navbar-brand navbar-branch-admin text-white hide-text">
                         <img class="ml-2 my-auto hide-text" src="~/images/logoCofee.png" width="50" height="50">
                         <h4 class="hide-text p-2 m-auto hide-text text-left" style="display: table-caption;"><span class="text-warning my-auto">Mas</span>ter Coff<span class="text-warning">ee</span></h4>
                     </a>
                     @*<a class="navbar-brand"><img class="ml-2 my-auto" src="~/images/logoCofee.png" width="50" height="50"></a>*@
 
-                    @*<button class="navbar-toggler text-white border-white" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler text-white border-white" style="margin-right: 10px;" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="text-white"><i class="fas fa-sliders-h"></i></span>
-                    </button>*@
-                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    </button>
+                    @*<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                    aria-label="Search" aria-describedby="basic-addon2">
@@ -113,9 +113,9 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
-                    <div class="collapse navbar-collapse" id="navbartogglerdemo02">
-                        <ul class="navbar-nav ml-auto nav-item-change">
+                    </form>*@
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ml-auto">
 
                             @Html.Partial("IndexPartialView\\NavbarAdminUlView")
 
